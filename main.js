@@ -1,28 +1,15 @@
-const form = document.getElementById('form-tarefas');
-let linhas='';
-form.addEventListener('submit', function(e){
-    e.preventDefault();
-document.getElementById('nome-tarefa');
-let linha='<ul>';
-linha += `<li>${inputNomeTarefa.value}</li>`;
-linha += `</ul>`;
+$(document).ready(function () {
+$('form').on('submit', function (e) {
+    e.preventDefault ();
 
-linhas += linha;
-const corpoTabela = document.querySelector('lista');
-corpoTabela.innerHTML = linhas
-inputNomeTarefa.value='';
-})
-$(document).ready(function(){
-$('cadastrar').on('click',function(){
-    const nomeTarefa =
-    $('#nomeTarefa').val()
-    const li = document.createElement('li');
-    li.innerHTML = ${nomeTarefa}
-    $('ul').append(li)
-    $('#nomeTarefa').val('')
-    $('li').click(function(){
-    $(li).addclass('feito')
-    })
-    
-})
-})
+    const nomeTarefa =$('#nome-da-tarefa').val ();
+    const novaTarefa = $('<li></li>');
+    $(`<li> ${nomeTarefa}</li>`).appendTo(novaTarefa);
+    $(novaTarefa).appendTo('ul');
+    $('li').click(function (){
+        $("this").addClass("riscado");
+    });
+    $('#nome-da-tarefa').val("");
+        
+    });
+});
