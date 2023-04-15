@@ -7,7 +7,7 @@ $('form').on('submit', function (e) {
     $(`<li> ${nomeTarefa}</li>`).appendTo(novaTarefa);
     $(novaTarefa).appendTo('ul');
     $('li').click(function (){
-        $("this").addClass("riscado");
+        $(this).addClass("riscado");
     });
     $('#nome-da-tarefa').val("");
         
