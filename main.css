@@ -44,6 +44,9 @@ ul {
     position: relative;
     max-height: 280px;
     overflow-x: hidden;
+
+}
+.riscado {
     text-decoration: line-through;
 }
 input button {
